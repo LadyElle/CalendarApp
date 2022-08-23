@@ -16,8 +16,14 @@ struct CalendarRowView : View{
     var body: some View{
         VStack {
             Text("\(day)")
+                .font(.largeTitle)
+                .foregroundColor(Color.white)
+                .shadow(color: Color.black, radius: 2, x: 0, y: 0)
             Spacer()
             Text("\(date)")
+                .font(.largeTitle)
+                .foregroundColor(Color.white)
+                .shadow(color: Color.black, radius: 2, x: 0, y: 0)
         }.padding().background(){
             AsyncImage(url: URL(string: animalImageURL)){ phase in
                 if let image = phase.image{
@@ -29,7 +35,7 @@ struct CalendarRowView : View{
                 else {
                     ProgressView()
                 }
-            }.frame(width: 300, height: 200)
+            }.frame(width: 350, height: 250)
         }
     }
     

@@ -14,8 +14,9 @@ struct ContentView : View {
             VStack {
                 ForEach(calendarDayCells) { calendarDayCell in
                     CalendarRowView(animalImageURL: calendarDayCell.animalImageURL, day: calendarDayCell.dayOfWeek, date: calendarDayCell.dayDate, currentDay: calendarDayCell.currentDay)
-                        .frame(width: 300, height: 200, alignment: .center)
+                        .frame(width: 350, height: 250, alignment: .center)
                         .border(.black, width: 1)
+                        .padding(5)
                 }
             }.padding()
         }.task {
